@@ -1,0 +1,128 @@
+.page-header {
+  background-color: var(--bgc-sky);
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.page-main {
+  background-color: var(--bgc-green);
+  height: 75vh;
+  width: 100%;
+  overflow: hidden;
+  &--active-button .pop-up{    
+    transform: translateX(0px);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  &--active-authorization{
+    .chat{
+      transform: translateX(0);
+    }
+  }
+}
+
+.page-footer {
+  background-color: var(--bgc-sky);
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.chat {
+  width: 320px;
+  height: 50vh;
+  background-color: #fff;
+  border: 4px solid #F6B544;
+  border-radius: 25px;
+  position: fixed;
+  top: 15vh;
+  right: 75px;
+  padding: 20px 30px 10px;
+  transition: transform 0.8s;
+  transform: translateX(3000px);
+}
+
+.chat__wrapper {
+  height: 100%;
+} 
+.chat__title{
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 140, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  height: 10%;
+}
+.chat__main{
+  width: 100%;
+  height: 75%;
+  overflow-y: auto;
+}
+.chat__dialog{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  p{    
+    width: 80%;
+    position: relative;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+}
+.chat__text{
+
+  &--admin{
+    position: relative;
+    margin-right: auto;
+    background-color: aquamarine;
+    color: #4a2626;
+  }
+  &--user{
+    margin-left: auto;
+    background: #3082FE;
+    color: #fff;
+  }
+}
+  
+
+.chat__sending-field{
+  height: 15%;
+  width: 100%;
+}
+.chat__textarea{
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border-color: #F6B544;
+  border-radius: 5px;
+  padding: 6px 10px;
+  color: rgb(148, 148, 148);
+}
+.button-chat {
+  width: 80px;
+  height: 80px;
+  background-color: #F6B544;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 70vh;
+  right: 75px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  &:hover{
+    background-color: #f5a41a;
+  }
+}
