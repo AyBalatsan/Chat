@@ -1,10 +1,8 @@
 export default function initTextChat(){    
   window.addEventListener( 'keyup', event => {  
-    console.log('wd');  
     if( event.code === 'Enter' ){
       const avtorization = document.querySelector('.page-main--active-authorization')
-      if(avtorization){
-        console.log('2wd');  
+      if(avtorization){  
         const dialogs = document.querySelector('.chat__dialog')
         let parag = document.createElement('p');
         let text = document.querySelector('.chat__textarea')
