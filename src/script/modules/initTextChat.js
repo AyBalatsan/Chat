@@ -6,14 +6,14 @@ export default function initTextChat(){
         const dialogs = document.querySelector('.chat__dialog')
         let paragraph = document.createElement('p');
         let text = document.querySelector('.chat__textarea')
-        
-        if (text.value == '') {
-              
-        } else{
+        const textValue = text.value
+        if (textValue.length === 0 || !textValue.trim()) {
+          alert('Я пустая строка')           
+        }
+        else{
           paragraph.textContent = text.value
           paragraph.classList.add('chat__text--user')
-          dialogs.append(paragraph)     
-          console.log('hi'); 
+          dialogs.append(paragraph)  
         }
         text.value = ''
       }
