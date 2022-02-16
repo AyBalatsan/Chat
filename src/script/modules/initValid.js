@@ -24,21 +24,8 @@ export default function initValid(){
         password: 'dsaewq'
       },
     ]
-    // запись в local
-    localStorage.setItem('users', JSON.stringify(users))
-    // получаем ключ с local
-      
-    
-    // закидываем нового пользователя
-    
-    
-    // const addBodyUser = usersLocal.push(body)
-    
-    // localStorage.removeItem('users')
-    // localStorage.setItem('users', JSON.stringify(addBodyUser))
-    // let newListUsersLocal = JSON.parse(localStorage.getItem('users')) 
-    // console.log(newListUsersLocal);
 
+    localStorage.setItem('users', JSON.stringify(users))
     buttonRegistration.addEventListener('click', function (item) {
         item.preventDefault();
         input.forEach((field) => field.classList.remove('error'))
@@ -46,15 +33,15 @@ export default function initValid(){
           if (password.value == passwordAgain.value) {
             let usersLocal = JSON.parse(localStorage.getItem('users'))
             
-            let a = false;
+            let isExcellent = false;
             for (let index = 0; index < usersLocal.length; index++) {
               const element = usersLocal[index];
               if (element.name == registrationLogin.value) {
-                a = true;
+                isExcellent = true;
                 break;
               }
             }
-            if(!a) {
+            if(!isExcellent) {
               const body = {
                 name: registrationLogin.value,
                 password: password.value
@@ -65,7 +52,7 @@ export default function initValid(){
               const popUp = document.querySelector('.pop-up__wrapper');
               popUp.classList.remove('pop-up__wrapper--register')
               popUp.classList.add('pop-up__wrapper--login')
-              alert('ВЫ успешно зарегистрированы')
+              alert('Вы успешно зарегистрированы')
             }
             else{
               alert('Логин с таким именем существует')
@@ -87,7 +74,7 @@ export default function initValid(){
       item.preventDefault();
       if(loginName.value !== '' && loginPassword.value !== ''){
         let usersLocal = JSON.parse(localStorage.getItem('users'))
-        let isFain = false;
+        let isExcellent = false;
         for (let index = 0; index < usersLocal.length; index++) {
           const element = usersLocal[index];
 
@@ -95,11 +82,11 @@ export default function initValid(){
             main.classList.remove('page-main--active-button')
             main.classList.add('page-main--active-authorization')                
             buttonPhone.classList.add('js-button-chat--close')                 
-            isFain = true;
+            isExcellent = true;
             break
           }
         }
-        if(!isFain){
+        if(!isExcellent){
           alert('Неправильный логин или пароль')
         }
       }

@@ -14,49 +14,50 @@ html(lang="ru")
     header.page-header 
       | menu 
 
-    main 
-      h1.visually-hidden main page  
-      .page-main
-        .pop-up 
-          .pop-up__wrapper.pop-up__wrapper--register
-            button.pop-up__close.js-pop-up__close
-              svg(width='24' height='24' viewbox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg')
-                rect(x='5.79706' y='1' width='50' height='7' transform='rotate(45 5.79706 1)' fill='#000')
-                rect(x='0.847412' y='35.7026' width='50' height='7' transform='rotate(-45 0.847412 35.7026)' fill='#000')
-                rect(x='5.79712' y='1' width='50' height='7' transform='rotate(45 5.79712 1)' fill='#000')
-            .pop-up__register#register
-              .breadcrumbs
-                a(href='#login').breadcrumbs__link Вход
-                span.breadcrumbs__span Регистрация 
-              form(action="").form.js-form-registration
-                .form__shell                
-                  p.form__title Регистрация                
-                  input#login-field(type="text" name='login-register' placeholder='name' ).form__input-field.form__input-field--login  
-                  input#password-register(type="password" name='password-register' placeholder='password' ).form__input-field.form__input-field--password               
-                  input#password-again-register(type="password" name='password-register' placeholder='password-again').form__input-field.form__input-field--password-again              
-                  button.form__input-button.js-form__input-button Регистация
-            .pop-up__login#login
-              .breadcrumbs
-                span.breadcrumbs__span Вход
-                a(href='#register').breadcrumbs__link Регистрация
-              form(action="").form
-                .form__shell                
-                  p.form__title Вход
-                  input(type="text" name='login-register' placeholder='name')#login-avtor.form__input-field
-                  input(type="password" name='password-register' placeholder='password')#password.form__input-field
-                  input(type="submit", value="Вход")#button-in.form__input-button    
-        .chat 
-          .chat__wrapper 
-            p.chat__title Напиши нам
-            .chat__main
-              .chat__dialog
-                p.chat__text--admin Мы онлайн!  Задайте ваш вопрос в чате
-            .chat__sending-field
-              textarea(name="", cols="30", rows="10").chat__textarea 
-        button.button-chat.js-button-chat 
-          svg(width='30' height='28' viewbox='0 0 30 28' fill='none' xmlns='http://www.w3.org/2000/svg')
-            path(fill-rule='evenodd' clip-rule='evenodd' d='M28.1785 19.651C27.457 19.297 23.9085 17.5879 23.2468 17.3517C22.5857 17.1158 22.104 16.9984 21.6234 17.7056C21.142 18.4128 19.7591 20.0049 19.3379 20.4763C18.9167 20.948 18.4962 21.0072 17.7743 20.6533C17.0524 20.2997 14.7271 19.5531 11.9703 17.1454C9.82495 15.2715 8.37661 12.9571 7.95538 12.2499C7.53486 11.542 7.95182 11.1964 8.27201 10.8076C9.05329 9.85757 9.83563 8.86154 10.0761 8.39018C10.317 7.91846 10.1964 7.50563 10.0156 7.15202C9.83563 6.79841 8.39227 3.3198 7.79101 1.90431C7.2047 0.526801 6.61021 0.712839 6.16692 0.691239C5.7464 0.670684 5.26504 0.666504 4.78368 0.666504C4.30268 0.666504 3.52069 0.843135 2.85896 1.55105C2.19758 2.25862 0.333344 3.96814 0.333344 7.44675C0.333344 10.9254 2.91944 14.2859 3.28019 14.7576C3.64095 15.2293 8.3695 22.3677 15.6091 25.4286C17.331 26.1574 18.6751 26.5918 19.7236 26.9176C21.4526 27.4555 23.0255 27.3795 24.2693 27.1977C25.656 26.9946 28.5389 25.4878 29.1408 23.8372C29.7421 22.1862 29.7421 20.7714 29.5613 20.4763C29.3813 20.1816 28.9 20.0049 28.1785 19.651Z' fill='white')
-
+    main.page-main
+          h1.visually-hidden main page  
+          .pop-up 
+            .pop-up__wrapper.pop-up__wrapper--register
+              button.pop-up__close.js-pop-up__close
+                svg(width='24' height='24' viewbox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  rect(x='5.79706' y='1' width='50' height='7' transform='rotate(45 5.79706 1)' fill='#000')
+                  rect(x='0.847412' y='35.7026' width='50' height='7' transform='rotate(-45 0.847412 35.7026)' fill='#000')
+                  rect(x='5.79712' y='1' width='50' height='7' transform='rotate(45 5.79712 1)' fill='#000')
+              .pop-up__register#register
+                .breadcrumbs
+                  a(href='#login').breadcrumbs__link Вход
+                  span.breadcrumbs__span Регистрация 
+                form(action="").form.js-form-registration
+                  .form__shell                
+                    p.form__title Регистрация                
+                    input#login-field(type="text" name='login-register' placeholder='name' ).form__input-field.form__input-field--login  
+                    input#password-register(type="password" name='password-register' placeholder='password' ).form__input-field.form__input-field--password               
+                    input#password-again-register(type="password" name='password-register' placeholder='password-again').form__input-field.form__input-field--password-again              
+                    button.form__input-button.js-form__input-button Регистация
+              .pop-up__login#login
+                .breadcrumbs
+                  span.breadcrumbs__span Вход
+                  a(href='#register').breadcrumbs__link Регистрация
+                form(action="").form
+                  .form__shell                
+                    p.form__title Вход
+                    input(type="text" name='login-register' placeholder='name')#login-avtor.form__input-field
+                    input(type="password" name='password-register' placeholder='password')#password.form__input-field
+                    input(type="submit", value="Вход")#button-in.form__input-button    
+          .chat 
+            .chat__wrapper 
+              p.chat__title Напиши нам
+              .chat__main
+                .chat__dialog
+                  p.chat__text--admin Мы онлайн!  Задайте ваш вопрос в чате
+              .chat__sending-field
+                textarea(name="", cols="30", rows="10").chat__textarea 
+          button.button-chat.js-button-chat 
+            svg(width='30' height='28' viewbox='0 0 30 28' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(fill-rule='evenodd' clip-rule='evenodd' d='M28.1785 19.651C27.457 19.297 23.9085 17.5879 23.2468 17.3517C22.5857 17.1158 22.104 16.9984 21.6234 17.7056C21.142 18.4128 19.7591 20.0049 19.3379 20.4763C18.9167 20.948 18.4962 21.0072 17.7743 20.6533C17.0524 20.2997 14.7271 19.5531 11.9703 17.1454C9.82495 15.2715 8.37661 12.9571 7.95538 12.2499C7.53486 11.542 7.95182 11.1964 8.27201 10.8076C9.05329 9.85757 9.83563 8.86154 10.0761 8.39018C10.317 7.91846 10.1964 7.50563 10.0156 7.15202C9.83563 6.79841 8.39227 3.3198 7.79101 1.90431C7.2047 0.526801 6.61021 0.712839 6.16692 0.691239C5.7464 0.670684 5.26504 0.666504 4.78368 0.666504C4.30268 0.666504 3.52069 0.843135 2.85896 1.55105C2.19758 2.25862 0.333344 3.96814 0.333344 7.44675C0.333344 10.9254 2.91944 14.2859 3.28019 14.7576C3.64095 15.2293 8.3695 22.3677 15.6091 25.4286C17.331 26.1574 18.6751 26.5918 19.7236 26.9176C21.4526 27.4555 23.0255 27.3795 24.2693 27.1977C25.656 26.9946 28.5389 25.4878 29.1408 23.8372C29.7421 22.1862 29.7421 20.7714 29.5613 20.4763C29.3813 20.1816 28.9 20.0049 28.1785 19.651Z' fill='white')
+ 
+      
+      
     footer.page-footer
       | footer  
     +script

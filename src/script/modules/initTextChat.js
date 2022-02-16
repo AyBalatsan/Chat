@@ -1,14 +1,20 @@
 export default function initTextChat(){    
   window.addEventListener( 'keyup', event => {  
     if( event.code === 'Enter' ){
-      const avtorization = document.querySelector('.page-main--active-authorization')
-      if(avtorization){  
+      const authorization = document.querySelector('.page-main--active-authorization')
+      if(authorization){  
         const dialogs = document.querySelector('.chat__dialog')
-        let parag = document.createElement('p');
+        let paragraph = document.createElement('p');
         let text = document.querySelector('.chat__textarea')
-        parag.textContent = text.value
-        parag.classList.add('chat__text--user')
-        dialogs.append(parag)
+        
+        if (text.value == '') {
+              
+        } else{
+          paragraph.textContent = text.value
+          paragraph.classList.add('chat__text--user')
+          dialogs.append(paragraph)     
+          console.log('hi'); 
+        }
         text.value = ''
       }
     } 

@@ -8,6 +8,3 @@ document.addEventListener('DOMContentLoaded', () => {
   initValid();
   initTextChat();
 })
-
-
-
